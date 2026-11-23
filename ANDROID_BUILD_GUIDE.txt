@@ -1,0 +1,27 @@
+CEBU FARE GUIDE - ANDROID APK BUILD
+
+This project is prepared to build an installable Android DEBUG APK using GitHub Actions.
+The APK is not included in this source ZIP because this build environment does not have
+an Android SDK or Gradle Android toolchain installed.
+
+BUILD USING GITHUB (RECOMMENDED)
+1. Extract this ZIP.
+2. Create or open your GitHub repository for Cebu Fare Guide.
+3. Upload/push the CONTENTS of this project folder to the repository root.
+   package.json must be directly in the repository root.
+4. Open the repository on GitHub and select the Actions tab.
+5. Select "Build Android APK".
+6. Click "Run workflow" and confirm.
+7. Wait for the workflow to finish successfully.
+8. Open the completed workflow run and download the artifact named
+   "cebu-fare-guide-debug-apk".
+9. Extract the artifact ZIP. It contains app-debug.apk.
+10. Transfer app-debug.apk to your Android phone and install it. Android may ask
+    you to allow installation from that file manager/browser.
+
+NOTES
+- This workflow builds a DEBUG APK for testing and direct installation.
+- It is not a Play Store release-signed APK. A release APK/AAB requires a signing key.
+- The app package ID is ph.cebufareguide.app.
+- The web project and its existing route data remain the source of the app.
+- The GitHub workflow runs route tests before building the APK.
